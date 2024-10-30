@@ -1,7 +1,6 @@
 # Ejemplo de concurrencia
 
-## Ejemplificación de las reglas CON02-C y CON43-C 
-## Referentes a data races con multihilos, uso de variables volátiles y atómicas.
+## Ejemplificación de las reglas CON02-C y CON43-C referentes a data races con multihilos, uso de variables volátiles y atómicas.
 
 ## Especificaciones
 * Linux Ubuntu 24.04
