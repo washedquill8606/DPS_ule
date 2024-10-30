@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <threads.h>
 
-int contador = 0;
+// CON43-C. Do not allow data races in multithreaded code
+// CON02-C. Do not use volatile as a synchronization primitive
+static volatile int contador = 0;
 
 int incrementar(void *arg) {
     for (int i = 0; i < 100000; ++i) {
