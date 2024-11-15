@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Verifica si el sistema es little o big endian para ordenar las direcciones
 int main() {
 
     unsigned int x = 1;  
